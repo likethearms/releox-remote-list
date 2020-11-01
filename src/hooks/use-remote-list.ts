@@ -32,7 +32,7 @@ export interface PaginationItem {
   onClick(): void;
 }
 
-export default (options: Options): RemoteListObject => {
+export const useRemoteList = (options: Options): RemoteListObject => {
   const { totalSize, defaultSizePerPage, onChange, query } = options;
   const [queryCache, setQueryCache] = useState('');
   const [currentPageIndex, setCurrentPageIndex] = useState(0);

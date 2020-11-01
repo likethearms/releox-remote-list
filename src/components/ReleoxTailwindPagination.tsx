@@ -7,10 +7,7 @@ interface Props {
   floatRight?: boolean;
 }
 
-const TailwindPagination = ({
-  paginationList,
-  floatRight,
-}: Props): JSX.Element => {
+const Component = ({ paginationList, floatRight }: Props): JSX.Element => {
   return (
     <div className={`inline-block ${floatRight ? 'float-right' : ''}`}>
       <ul className="flex border border-grey-light rounded w-auto TailwindPagination">
@@ -40,8 +37,8 @@ const TailwindPagination = ({
   );
 };
 
-TailwindPagination.defaultProps = {
+Component.defaultProps = {
   floatRight: true,
 };
 
-export default TailwindPagination;
+export const ReleoxTailwindPagination = Component;

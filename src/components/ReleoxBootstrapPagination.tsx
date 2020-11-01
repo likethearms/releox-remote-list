@@ -6,7 +6,9 @@ interface Props {
   paginationList: PaginationItem[];
 }
 
-export default ({ paginationList }: Props): JSX.Element => {
+export const ReleoxBootstrapPagination = ({
+  paginationList,
+}: Props): JSX.Element => {
   return (
     <nav>
       <ul className="pagination justify-content-end">

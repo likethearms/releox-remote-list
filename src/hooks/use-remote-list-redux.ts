@@ -1,9 +1,10 @@
 import { useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import useRemoteList, {
+import {
   BaseFilter,
   Filter,
   RemoteListObject,
+  useRemoteList,
 } from './use-remote-list';
 
 interface Options {
@@ -14,7 +15,7 @@ interface Options {
   defaultSizePerPage?: number;
 }
 
-export default ({
+export const useRemoteListRedux = ({
   totalSizeSelector,
   onChange,
   query,

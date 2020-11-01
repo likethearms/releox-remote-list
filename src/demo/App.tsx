@@ -1,8 +1,8 @@
 /* eslint-disable no-console,@typescript-eslint/no-explicit-any */
 import React from 'react';
-import BootstrapPagination from '../components/ReleoxBootstrapPagination';
-import TailwindPagination from '../components/ReleoxTailwindPagination';
-import useRemoteList from '../hooks/use-remote-list';
+import { ReleoxBootstrapPagination } from '../components/ReleoxBootstrapPagination';
+import { ReleoxTailwindPagination } from '../components/ReleoxTailwindPagination';
+import { useRemoteList } from '../hooks/use-remote-list';
 import NativePagination from './NativePagination';
 import ReduxPaginationDemo from './ReduxPaginationDemo';
 
@@ -20,8 +20,8 @@ const App = (): JSX.Element => {
     <div style={{ padding: '20px' }} className="clearfix">
       <NativePagination />
       <ReduxPaginationDemo />
-      <BootstrapPagination paginationList={paginationList} />
-      <TailwindPagination paginationList={paginationList} />
+      <ReleoxBootstrapPagination paginationList={paginationList} />
+      <ReleoxTailwindPagination paginationList={paginationList} />
     </div>
   );
 };

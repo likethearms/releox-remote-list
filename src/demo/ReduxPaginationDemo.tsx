@@ -1,7 +1,7 @@
 /* eslint-disable no-console,@typescript-eslint/no-explicit-any */
 
 import React from 'react';
-import useRemoteListRedux from '../hooks/use-remote-list-redux';
+import { useRemoteListRedux } from '../hooks/use-remote-list-redux';
 import onChangeAction from './on-change-action';
 
 const FakeSelector = () => 20 * 7;

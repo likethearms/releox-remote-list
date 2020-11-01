@@ -1,7 +1,7 @@
 /* eslint-disable no-console,@typescript-eslint/no-explicit-any */
 
 import React from 'react';
-import useRemoteList from '../hooks/use-remote-list';
+import { useRemoteList } from '../hooks/use-remote-list';
 
 export default (): JSX.Element => {
   const { paginationList } = useRemoteList({
