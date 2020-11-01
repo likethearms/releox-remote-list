@@ -7,7 +7,7 @@
     "test": "node scripts/test.js",
     "build": "rm -rf dist && mkdir dist && cp src/releox-remote-list.css dist/releox-remote-list.css && tsc -p ./config/tsconfig.json && npm run create-typings",
     "lint": "eslint src --ext .js,.tsx,.ts",
-    "create-typings": "tsc --project ./build-configs/tsconfig.typing.json",
+    "create-typings": "tsc --project ./config/tsconfig.typing.json",
     "postpublish": "PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION && git push --tags",
     "prepublish": "npm run build",
     "publish-beta": "npm publish --tag beta"
