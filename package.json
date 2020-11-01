@@ -1,7 +1,7 @@
 {
   "name": "releox-remote-list",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "scripts": {
     "start": "node scripts/start.js",
     "test": "node scripts/test.js",
