@@ -1,18 +1,27 @@
+/* eslint-disable no-console,@typescript-eslint/no-explicit-any */
 import React from 'react';
+import BootstrapPagination from '../components/BootstrapPagination';
+import TailwindPagination from '../components/TailwindPagination';
+import useRemoteList from '../hooks/use-remote-list';
+import NativePagination from './NativePagination';
+import ReduxPaginationDemo from './ReduxPaginationDemo';
 
 const App = (): JSX.Element => {
+  const { paginationList } = useRemoteList({
+    totalSize: 20 * 7,
+    onChange: console.log,
+    query: {
+      where: { x: 'name' },
+      include: ['client'],
+      order: 'createAt desc',
+    },
+  });
   return (
-    <div className="App">
-      <header className="App-header">
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ padding: '20px' }} className="clearfix">
+      <NativePagination />
+      <ReduxPaginationDemo />
+      <BootstrapPagination paginationList={paginationList} />
+      <TailwindPagination paginationList={paginationList} />
     </div>
   );
 };

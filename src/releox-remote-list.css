@@ -1,0 +1,3 @@
+.TailwindPagination > li:last-child > button {
+  border-right: 0 !important;
+}
